@@ -63,7 +63,7 @@ export default function DoshaQuiz() {
   return (
     <>
       <div className="page-header">
-        <h2 className="h1" style={{ margin: 0 }}>
+        <h2 className="h1">
           Dosha Quiz
         </h2>
         <div className="subtle">A light, non-diagnostic guide to your tendencies.</div>
@@ -71,27 +71,30 @@ export default function DoshaQuiz() {
 
       <div className="grid">
         {qs.map((q) => (
-          <div key={q.id} className="card" style={{ padding: "16px" }}>
+          <div key={q.id} className="card" style={{ padding: "var(--space-4)" }}>
             <strong>{q.text}</strong>
-            <div style={{ display: "grid", gap: 8, marginTop: 8 }}>
+            <div className="grid-gap-2 mt-2">
               {q.options.map(([label, val]) => (
-                <label key={label} className="tag" style={{ cursor: "pointer" }}>
+                <div key={label} className="radio-tag">
                   <input
                     type="radio"
+                    id={`${q.id}-${val}`}
                     name={q.id}
                     checked={answers[q.id] === val}
                     onChange={() => setAns({ ...answers, [q.id]: val })}
-                  />{" "}
-                  {label}
-                </label>
+                  />
+                  <label htmlFor={`${q.id}-${val}`} className="tag">
+                    {label}
+                  </label>
+                </div>
               ))}
             </div>
           </div>
         ))}
       </div>
 
-      <div className="card" style={{ padding: "16px" }}>
-        <h3 style={{ marginTop: 0 }}>Result</h3>
+      <div className="card" style={{ padding: "var(--space-4)" }}>
+        <h3 className="mt-0">Result</h3>
         {result ? (
           <div>
             Your dominant dosha appears to be <strong>{result}</strong>.

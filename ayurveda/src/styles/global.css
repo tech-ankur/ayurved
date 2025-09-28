@@ -11,9 +11,11 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   color: var(--text);
-  background: radial-gradient(1200px 800px at 20% -20%, rgba(16, 118, 110, 0.15), transparent 60%),
-    radial-gradient(1000px 700px at 100% 20%, rgba(224, 122, 31, 0.12), transparent 60%),
-    linear-gradient(180deg, #0a0d10, #090c0e 35%, #0b0e11);
+  /* The background now uses gradients based on your --brand and --accent tokens */
+  background: 
+    radial-gradient(1200px 800px at 20% -20%, hsla(175, 79%, 25%, 0.15), transparent 60%),
+    radial-gradient(1000px 700px at 100% 20%, hsla(28, 77%, 50%, 0.12), transparent 60%),
+    var(--bg);
 }
 
 a {
@@ -43,11 +45,10 @@ img {
 }
 
 .card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  background: var(--muted);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--shadow-1);
-  backdrop-filter: blur(8px);
 }
 
 .page {

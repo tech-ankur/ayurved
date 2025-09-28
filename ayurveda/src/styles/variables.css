@@ -1,18 +1,22 @@
-/* Color tokens and spacing scale (3-5 colors total) */
+/* Color tokens and spacing scale */
 :root {
-  --brand: #0f766e; /* primary teal */
-  --brand-600: #115e57;
-  --accent: #e07a1f; /* saffron accent */
-  --bg: #0b0e11; /* near-black background */
-  --muted: #1a1f24; /* dark neutral card */
-  --text: #e6f2ef; /* off-white foreground */
-  --text-muted: #b6c9c4; /* softer text */
-  --danger: #e25656;
-  --success: #17a673;
+  /* Updated to your green/beige palette */
+  --brand: #819067;       /* Muted Green */
+  --brand-600: #64714d;    /* Darker Muted Green */
+  --accent: #B1AB86;      /* Beige */
+  --bg: #FEFAE0;          /* Cream */
+  --muted: #F5F3E9;       /* Lighter Cream for cards */
+  --text: #0A400C;        /* Dark Green */
+  --text-muted: #819067;  /* Muted Green */
 
+  /* Selected complementary state colors */
+  --danger: #C04C4C;
+  --success: #64714d;
+  
+  /* Unchanged structural tokens */
   --radius: 14px;
-  --shadow-1: 0 10px 25px rgba(0, 0, 0, 0.25);
-  --shadow-2: 0 20px 60px rgba(0, 0, 0, 0.35);
+  --shadow-1: 0 10px 25px rgba(177, 171, 134, 0.2);
+  --shadow-2: 0 20px 60px rgba(177, 171, 134, 0.3);
 
   --space-1: 4px;
   --space-2: 8px;
